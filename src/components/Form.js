@@ -36,7 +36,7 @@ export const Form = (props) => {
       }
       return false;
     } catch (e) {
-      Swal.fire("Cancelled", "Something went wrong..", "error");
+      Swal.fire("Error", "Something went wrong..", "error");
     }
   };
   return (
