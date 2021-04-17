@@ -1,6 +1,7 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  background-color: black;
 }
 
 .main {
@@ -18,3 +19,102 @@
   border-bottom: 1px solid red !important;
   box-shadow: 0 1px 0 0 red !important;
 }
+
+[type="radio"].with-gap:checked + span:after {
+  background-color: red !important;
+}
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border: 2px solid red !important;
+}
+
+.borderScore {
+  border-left: 5px solid red;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.borderScoreNft {
+  border-left: 5px solid red;
+  padding-left: 10px;
+}
+
+.card {
+  overflow-y: auto;
+}
+
+#photo {
+  width: 150px !important;
+}
+
+#nftPadding {
+  padding: 20px;
+}
+
+.carousel {
+  cursor: grab;
+}
+.carousel:active {
+  cursor: grabbing;
+}
+
+#tooltip {
+  color: gray !important;
+}
+
+.borderScoreOne {
+  border-left: 5px solid red;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+#downloadButtonTransaction {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+#action {
+  margin-top: 25px;
+}
+
+.chartLineCoin {
+  width: 400px;
+  height: 200px;
+}
+
+.noData {
+  width: 160px;
+  align-content: center;
+}
+
+.loading {
+  margin-top: 100px;
+}
+
+.linkModal {
+  border-left: 5px solid red;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.linkColor {
+  color: red;
+}
+
+a {
+  color: white !important;
+}
+
+.viewExplore {
+  color: black !important;
+}
+
+.left {
+  text-align: left !important;
+}
+/* .modal {
+  max-height: 75% !important ;
+} */
