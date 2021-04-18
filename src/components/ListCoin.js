@@ -1,5 +1,5 @@
 import "../styles.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Coin } from "../components/Coin.js";
 import { Loading } from "../components/Loading.js";
 import nodata from "../assets/img/No_data.png";
@@ -86,6 +86,10 @@ export const ListCoin = (props) => {
                         quote={data.quote}
                         currency={props.currency}
                         portofolio={props.portofolio[count]}
+                        supportErc={data.supports_erc}
+                        contractAddress={data.contract_address}
+                        chain_id={props.chainID}
+                        address={props.address}
                       />
                     );
                   })}

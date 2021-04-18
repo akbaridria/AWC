@@ -115,6 +115,12 @@ a {
 .left {
   text-align: left !important;
 }
-/* .modal {
-  max-height: 75% !important ;
-} */
+
+#powered {
+  color: red !important;
+}
+
+.bodyCollaps {
+  margin: 20px;
+  padding-bottom: 20px;
+}

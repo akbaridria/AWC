@@ -1,24 +1,24 @@
 import "../styles.css";
-
-export const Modal = () => {
+import React, { useState, useEffect } from "react";
+import { ErcTransfer } from "../components/ErcTransfer.js";
+import M from "materialize-css/dist/js/materialize.min.js";
+export const Modal = (props) => {
+  const url = `https://etherman21.herokuapp.com/erc_csv/${props.chain_id}/${props.address}/${props.contractAddress}`;
+  useEffect(() => {
+    M.AutoInit();
+  }, []);
   return (
-    <div id="modal1" class="modal modal-fixed-footer">
+    <div id={"modal" + props.contractAddress} class="modal modal-fixed-footer">
       <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
-        <p>A bunch of text</p>
+        {props.tokenTransfer.map((data) => {
+          return data.transfers.map((raw) => {
+            return (
+              <ul className="collapsible popout">
+                <ErcTransfer raw={raw} />
+              </ul>
+            );
+          });
+        })}
       </div>
       <div class="modal-footer">
         <button
@@ -27,7 +27,9 @@ export const Modal = () => {
           name="action"
           style={{ backgroundColor: "red" }}
         >
-          Download As CSV
+          <a href={url} target="_blank">
+            Download as CSV
+          </a>
         </button>
       </div>
     </div>
