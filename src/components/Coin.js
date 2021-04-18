@@ -51,7 +51,7 @@ export const Coin = (props) => {
       </div>
 
       <div className="collapsible-body">
-        {/* <div className="linkModal">
+        <div className="linkModal">
           <label>
             <a
               href="#modal1"
@@ -61,7 +61,7 @@ export const Coin = (props) => {
             </a>
           </label>
         </div>
-        <Modal /> */}
+        <Modal />
         <center>
           <div className="chartLineCoin">
             <Line data={data} />

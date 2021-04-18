@@ -5,7 +5,7 @@ import { Loading } from "../components/Loading.js";
 import nodata from "../assets/img/No_data.png";
 export const Nft = (props) => {
   return (
-    <div className="card" style={{ width: 550, height: 550 }}>
+    <div className="card" style={{ height: 550 }}>
       <span className="card-title">
         <div className="borderScoreOne">
           <label>

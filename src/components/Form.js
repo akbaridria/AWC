@@ -1,5 +1,5 @@
 import "../styles.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Swal from "sweetalert2";
 import logo from "../assets/img/avax_logo.png";
 
@@ -22,23 +22,26 @@ export const Form = (props) => {
     return true;
   };
   const getAccount = async () => {
-    try {
-      if (window.web3) {
-        window.web3 = new Web3(window.web3.currentProvider);
-        await window.ethereum.enable();
+    console.log("connect wallet...");
+    // try {
+    if (window.web3) {
+      window.web3 = new Web3(window.ethereum);
+      await window.web3.eth.requestAccounts();
 
-        await window.web3.eth.getAccounts().then((e) => {
-          setEthExist(true);
+      await window.web3.eth.getAccounts().then((e) => {
+        setEthExist(true);
 
-          setAddress(e[0].toString());
-        });
+        setAddress(e[0].toString());
+      });
 
-        return true;
-      }
-      return false;
-    } catch (e) {
-      Swal.fire("Error", "Something went wrong..", "error");
+      return true;
+    } else {
+      console.log("oke ga ada");
     }
+    return false;
+    // } catch (e) {
+    //   Swal.fire("Error", "Something went wrong..", "error");
+    // }
   };
   return (
     <div className="card" style={{ height: 500 }}>
