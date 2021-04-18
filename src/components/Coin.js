@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2";
 import "../styles.css";
 import { Modal } from "../components/Modal.js";
 import M from "materialize-css/dist/js/materialize.min.js";
-
+import defaultImg from "../assets/img/token_logo.png";
 export const Coin = (props) => {
   useEffect(() => {
     M.AutoInit();
@@ -32,7 +32,7 @@ export const Coin = (props) => {
           alt="logo"
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src = require("../assets/img/token_logo.png");
+            e.target.src = defaultImg;
           }}
           src={props.logo}
           style={{ width: 45 }}

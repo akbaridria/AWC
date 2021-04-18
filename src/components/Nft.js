@@ -2,6 +2,7 @@ import { NFTPiece } from "../components/NftPiece.js";
 import "../styles.css";
 import React from "react";
 import { Loading } from "../components/Loading.js";
+import nodata from "../assets/img/No_data.png";
 export const Nft = (props) => {
   return (
     <div className="card" style={{ width: 550, height: 550 }}>
@@ -35,7 +36,7 @@ export const Nft = (props) => {
                 <div className="noData">
                   <img
                     alt="no data"
-                    src={require("../assets/img/No_data.png")}
+                    src={nodata}
                     style={{ width: 160, marginTop: 50 }}
                   />
                 </div>

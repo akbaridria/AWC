@@ -2,7 +2,7 @@ import "../styles.css";
 import { Loading } from "../components/Loading.js";
 import React from "react";
 import { Transactions } from "../components/Transactions.js";
-
+import nodata from "../assets/img/No_data.png"
 export const AllTransactions = (props) => {
   let url = `https://etherman21.herokuapp.com/transactions_csv/${props.chain_id}/${props.address}`;
   return (
@@ -49,7 +49,7 @@ export const AllTransactions = (props) => {
                 <div className="noData">
                   <img
                     alt="no data"
-                    src={require("../assets/img/No_data.png")}
+                    src={nodata}
                     style={{ width: 160, marginTop: 50 }}
                   />
                 </div>

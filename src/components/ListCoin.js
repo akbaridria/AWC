@@ -2,6 +2,7 @@ import "../styles.css";
 import React, { useEffect } from "react";
 import { Coin } from "../components/Coin.js";
 import { Loading } from "../components/Loading.js";
+import nodata from "../assets/img/No_data.png";
 
 import M from "materialize-css/dist/js/materialize.min.js";
 
@@ -65,7 +66,7 @@ export const ListCoin = (props) => {
                 <div className="noData">
                   <img
                     alt="no data"
-                    src={require("../assets/img/No_data.png")}
+                    src={nodata}
                     style={{ width: 160, marginTop: 50 }}
                   />
                 </div>
