@@ -1,6 +1,7 @@
 import "../styles.css";
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import logo from "../assets/img/avax_logo.png";
 
 export const Form = (props) => {
   const [address, setAddress] = useState("");
@@ -43,11 +44,7 @@ export const Form = (props) => {
     <div className="card" style={{ height: 500 }}>
       <div className="card-content">
         <center>
-          <img
-            alt="Avax Logo"
-            src={require("../assets/img/avax_logo.png")}
-            style={{ width: 150 }}
-          />
+          <img alt="Avax Logo" src={logo} style={{ width: 150 }} />
           <h5>
             <strong>Avalanche Wallet Checker</strong>
           </h5>
