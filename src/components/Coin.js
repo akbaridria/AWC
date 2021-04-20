@@ -26,11 +26,13 @@ export const Coin = (props) => {
     M.AutoInit();
   }, []);
   const data = {
-    labels: props.portofolio.date_converted,
+    labels:
+      props.portofolio === undefined ? [] : props.portofolio.date_converted,
     datasets: [
       {
-        label: props.portofolio.contract_name,
-        data: props.portofolio.data,
+        label:
+          props.portofolio === undefined ? "" : props.portofolio.contract_name,
+        data: props.portofolio === undefined ? [] : props.portofolio.data,
         fill: false,
         borderColor: "red"
       }
