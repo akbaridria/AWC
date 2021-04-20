@@ -10,6 +10,9 @@ export const Modal = (props) => {
   return (
     <div id={"modal" + props.contractAddress} class="modal modal-fixed-footer">
       <div class="modal-content">
+        <div className="borderScore">
+          <label>ERC20 Token Transfer</label>
+        </div>
         {props.tokenTransfer.map((data) => {
           return data.transfers.map((raw) => {
             return (
