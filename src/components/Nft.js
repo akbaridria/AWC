@@ -52,10 +52,26 @@ export const Nft = (props) => {
                       <NFTPiece
                         contract_name={contract_name}
                         token_id={data.token_id}
-                        image={data.external_data.image}
-                        name={data.external_data.name}
-                        description={data.external_data.description}
-                        external_url={data.external_data.external_url}
+                        image={
+                          data.external_data == null
+                            ? ""
+                            : data.external_data.image
+                        }
+                        name={
+                          data.external_data == null
+                            ? ""
+                            : data.external_data.name
+                        }
+                        description={
+                          data.external_data == null
+                            ? ""
+                            : data.external_data.description
+                        }
+                        external_url={
+                          data.external_data == null
+                            ? ""
+                            : data.external_data.external_url
+                        }
                       />
                     );
                   });
